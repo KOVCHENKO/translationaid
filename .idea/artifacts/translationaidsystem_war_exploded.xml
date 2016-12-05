@@ -1,0 +1,19 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="translationaidsystem:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/translationaidsystem_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="translationaidsystem" />
+          <element id="jpa-descriptors" facet="translationaidsystem/jpa/JPA" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.jboss.spec.javax.faces:jboss-jsf-api_2.2_spec:2.2.7" />
+          <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
+          <element id="library" level="project" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="translationaidsystem/web/Web" />
+    </root>
+  </artifact>
+</component>
