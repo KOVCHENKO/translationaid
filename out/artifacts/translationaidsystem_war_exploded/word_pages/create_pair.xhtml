@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Добавить автомобиль</title>
+</h:head>
+<h:body>
+
+    <ui:composition template="/templates/main_template.xhtml">
+        <ui:define name="content">
+
+
+            <h2>Добавить новое слово</h2>
+
+            <h:form>
+                <table border="0" cellspacing="5">
+                    <tr>
+                        <td align="left">
+                            <h:outputLabel value="Введите слово 1" />
+                        </td>
+                        <td>
+                            <h:inputText id="semanticUnitOne" value="#{wordPairController.wordPairOne}" required="true" requiredMessage="Введите первую пару" />
+                            <h:message for="semanticUnitOne" style="color:red" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="left">
+                            <h:outputLabel value="Введите вторую пару" />
+                        </td>
+                        <td>
+                            <h:inputText id="semanticUnitTwo" value="#{wordPairController.wordPairTwo}" required="true" requiredMessage="Введите вторую пару" />
+                            <h:message for="semanticUnitTwo" style="color:red" />
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td align="left">
+                            <h:outputLabel value="Выберите словарь" />
+                        </td>
+                        <td>
+                            <h:selectOneMenu id="dictionary" value="#{wordPairController.dictId}" required="true">
+                                <f:selectItems value="#{dictionaryController.allDicts()}" var="c"
+                                               itemLabel="#{c.name}" itemValue="#{c.id}" />
+                            </h:selectOneMenu>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2" align="center">
+                            <h:commandButton action="#{wordPairController.save}" value="Создать" />
+                        </td>
+                    </tr>
+
+                </table>
+
+            </h:form>
+
+
+        </ui:define>
+    </ui:composition>
+
+</h:body>
+
+
+
+</html>

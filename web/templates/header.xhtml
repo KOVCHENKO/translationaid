@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+    <title>Facelet Title</title>
+
+</h:head>
+<h:body>
+    <ui:composition>
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">CadHelper</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><h:link value="Главная" outcome="index"/></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Глоссарии <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><h:link value="Новый глоссарий" outcome="/gloss_pages/create_glossary"/></li>
+                                <li><h:link value="Все глоссариии" outcome="/gloss_pages/show_all"/></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"> Словарные пары <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><h:link value="Новое слово" outcome="/word_pages/create_pair"/></li>
+                                <li><h:link value="Все слова" outcome="/word_pages/show_all"/></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
+
+
+    </ui:composition>
+
+</h:body>
+</html>
+

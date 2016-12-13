@@ -1,0 +1,33 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="translationaidsystem:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/translationaidsystem_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="translationaidsystem" />
+          <element id="jpa-descriptors" facet="translationaidsystem/jpa/JPA" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.jboss.spec.javax.faces:jboss-jsf-api_2.2_spec:2.2.7" />
+          <element id="library" level="project" name="Maven: javax.inject:javax.inject:1" />
+          <element id="library" level="project" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.1-api:1.0.0.Final" />
+          <element id="library" level="project" name="Maven: edu.stanford.nlp:stanford-corenlp:models:3.6.0" />
+          <element id="library" level="project" name="Maven: com.io7m.xom:xom:1.2.10" />
+          <element id="library" level="project" name="Maven: xml-apis:xml-apis:1.3.03" />
+          <element id="library" level="project" name="Maven: xerces:xercesImpl:2.8.0" />
+          <element id="library" level="project" name="Maven: xalan:xalan:2.7.0" />
+          <element id="library" level="project" name="Maven: joda-time:joda-time:2.9" />
+          <element id="library" level="project" name="Maven: de.jollyday:jollyday:0.4.7" />
+          <element id="library" level="project" name="Maven: javax.xml.bind:jaxb-api:2.2.7" />
+          <element id="library" level="project" name="Maven: com.googlecode.efficient-java-matrix-library:ejml:0.23" />
+          <element id="library" level="project" name="Maven: javax.json:javax.json-api:1.0" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.12" />
+          <element id="library" level="project" name="Maven: edu.stanford.nlp:stanford-corenlp:3.6.0" />
+          <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.8.0" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="translationaidsystem/web/Web" />
+      <element id="javaee-facet-resources" facet="translationaidsystem/ejb/EJB" />
+    </root>
+  </artifact>
+</component>

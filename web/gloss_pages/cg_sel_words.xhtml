@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:head>
+    <title>Все сотрудники</title>
+</h:head>
+<h:body>
+
+    <ui:composition template="/templates/main_template.xhtml">
+        <ui:define name="content">
+
+            <h2>Выбрать слова для глоссария</h2>
+
+
+            <h:form>
+
+                <h:dataTable value="#{glossaryController.processedWords}" var="w" class="table">
+
+                    <h:column>
+                        <f:facet name="header">Слово 1</f:facet>
+                        #{w.wordName}
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">Количество</f:facet>
+                        #{w.count}
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">Слово 2</f:facet>
+                        <h:dataTable value="#{w.secondSingleWord}" var="c" class="table">
+                            <h:column>
+                                <f:facet name="header">Второй эквивалент</f:facet>
+                                #{c.word}
+                            </h:column>
+                        </h:dataTable>
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">Слово 2</f:facet>
+                        <h:selectOneMenu id="equivalents" value="#{glossaryController.chosenSecondWord}" required="true">
+                        <f:selectItems value="#{w.secondSingleWord}" var="c"
+                                       itemLabel="#{c.word}" itemValue="#{c.word}" />
+                    </h:selectOneMenu>
+                    </h:column>
+
+                    <h:column>
+                        <f:facet name="header">Новое слово</f:facet>
+                        <h:inputText id="semanticUnitTwo" value="#{glossaryController.newSecondWord}"  />
+                    </h:column>
+
+
+
+                </h:dataTable>
+
+            </h:form>
+
+        </ui:define>
+    </ui:composition>
+
+</h:body>
+
+
+
+</html>

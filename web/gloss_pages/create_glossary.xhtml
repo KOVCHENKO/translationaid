@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+    <title>Добавить автомобиль</title>
+</h:head>
+<h:body>
+
+    <ui:composition template="/templates/main_template.xhtml">
+        <ui:define name="content">
+
+
+        <h2>Create new glossary</h2>
+
+        <h:form>
+            <table border="0" cellspacing="5">
+            <tr>
+                <td align="left">
+                    <h:outputLabel value="Input text for rendering" /> <br/>
+
+                    <h:inputTextarea id="text" cols="30" rows="10"
+                                     value="#{glossaryController.textForRendering}" required="true" requiredMessage="Встаьте текст" /> <br/>
+                    <h:message for="text" style="color:red" />
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center">
+                    <h:commandButton action="#{glossaryController.render()}" value="Создать" />
+
+                </td>
+            </tr>
+            </table>
+        </h:form>
+
+        </ui:define>
+    </ui:composition>
+
+</h:body>
+
+
+
+</html>
